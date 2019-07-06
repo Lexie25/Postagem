@@ -1,0 +1,22 @@
+package com.br.face.zup.Service;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.stereotype.Service;
+
+import com.br.face.zup.Models.PostagemModel;
+
+@Service
+public class PostagemService {
+	
+	private Map<Integer, PostagemModel> postagens =new HashMap<Integer,PostagemModel>(){{
+	put(1,new PostagemModel(
+			"https://www.tmmodel.com.br/2017/wp-content/uploads/2018/01/MG_2494-480x480_t.jpg"
+			,"Desconhecida ","Olá mundo é muito legal "));	
+		
+}}; 
+	public Map<Integer, PostagemModel > retornarPostagens(){
+		return this.postagens;
+	}
+}

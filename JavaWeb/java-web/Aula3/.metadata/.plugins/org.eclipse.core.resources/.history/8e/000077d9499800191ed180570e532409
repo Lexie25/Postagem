@@ -1,0 +1,31 @@
+package com.br.face.zup.Controller;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.br.face.zup.Models.PostagemModel;
+import com.br.face.zup.Service.PostagemService;
+
+@Controller
+public class PostagemController {
+	@Autowired
+	PostagemService postagemService;
+
+	@RequestMapping
+	@ResponseBody
+	public Map<Integer, PostagemModel > retornarPostagens(){
+		return postagemService.retornarPostagens();
+
+	}
+	@RequestMapping ("/Hello World")
+	public ModelAndView olaMundo() {
+		ModelAndView modelAndView = new ModelAndView("HelloWorld.html");
+		return modelAndView;
+	}
+
+
+}

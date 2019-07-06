@@ -1,0 +1,14 @@
+package com.br.face.zup.Service;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class PostagensService {
+	
+	private Map<Integer, PostagemModel> postagens =new HashMap<Integer,PostagemModel>();
+    
+	
+}

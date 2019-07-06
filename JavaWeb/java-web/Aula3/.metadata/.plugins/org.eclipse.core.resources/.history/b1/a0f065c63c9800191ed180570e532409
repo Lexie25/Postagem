@@ -1,0 +1,10 @@
+package com.br.face.zup.Models;
+
+public class PostagemModel {
+	
+	private String foto;
+	private String usuario;
+	private String postagem;
+
+	
+}

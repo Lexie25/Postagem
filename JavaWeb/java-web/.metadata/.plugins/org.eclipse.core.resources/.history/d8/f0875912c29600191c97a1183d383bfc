@@ -1,0 +1,58 @@
+package com.br.java.web.service;
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class ListaService {
+
+	private List<String> nomes = new ArrayList<String>(Arrays.asList("Brenda", "Carol","Alessandro"));
+
+	public List<String> mostrarLista(){
+		return this.nomes;
+	}
+
+	public String buscarNome(String nomeUsuario) {
+		String retorno = "";
+		for (String nome: nomes) {
+			if(nome.equalsIgnoreCase(nomeUsuario)) {
+				retorno = nome;
+			}
+		}
+		return retorno;
+	}
+	String deleteNome;
+	public String deleteName(String nomeUsuario) {
+
+		for (String nome : nomes) {
+			if(nome.equalsIgnoreCase(nomeUsuario)) {
+				deleteNome = nome;
+				if(nomes.remove(deleteNome)){
+					return "Nome apagado com sucesso";
+				}
+			}
+			
+		}
+		return "Nome não existe";
+	}
+
+	public String adicionarNome(String nomeUsuario) {
+
+		boolean podeAdicionar = true;
+		String resposta = "Nome adicionado";
+		
+		for (String nome : nomes) {
+			if (nomeUsuario.equalsIgnoreCase(nome)) {
+				podeAdicionar = false;
+				resposta = " ";
+			}
+		}if (podeAdicionar == true) {
+			nomes.add(nomeUsuario);		}
+		return resposta;
+	}
+}
+
+

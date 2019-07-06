@@ -1,0 +1,5 @@
+package com.br.face.zup.Models;
+
+public class PostagemModel {
+
+}

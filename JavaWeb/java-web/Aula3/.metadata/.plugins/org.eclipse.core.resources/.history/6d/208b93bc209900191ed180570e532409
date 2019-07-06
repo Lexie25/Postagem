@@ -1,0 +1,15 @@
+package com.br.sistema.pizzaria.Service;
+
+import java.util.HashMap;
+import java.util.Map;
+import org.springframework.stereotype.Service;
+import com.br.sistema.pizzaria.Models.PizzariaModels;
+
+@Service
+public class PizzariaService {
+
+	private Map<Integer, PizzariaModels> postagens = new HashMap<Integer,PostagemModel>(){{
+		put(1,new PostagemModel(""," ",""))}};
+	
+
+}

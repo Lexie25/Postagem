@@ -1,0 +1,36 @@
+package com.br.java.web.service;
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class ListaService {
+
+	private List<String> nomes = new ArrayList<String>(Arrays.asList("Brenda", "Carol","Alessandro"));
+
+	public List<String> mostrarLista(){
+		return this.nomes;
+	}
+
+	public String buscarNome(String nomeUsuario) {
+		String retorno = "";
+		for (String nome: nomes) {
+			if(nome.equalsIgnoreCase(nomeUsuario)) {
+				retorno = nome;
+			}
+		}
+		return retorno;
+	}
+	public String deleteName(String nome) {
+		if(nomes.contains(nome)) {
+			nomes.remove(nome);
+			return "Apagado";
+		}else {
+			return "Não existe";
+		}
+
+	}
+}

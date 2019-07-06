@@ -1,0 +1,17 @@
+package com.br.java.web.models;
+
+public class PostagemModel {
+
+	private String usuario;
+	private String postagem;
+	
+	
+	
+	
+	public PostagemModel(String usuario, String postagem) {
+		this.usuario = usuario;
+		this.postagem = postagem;
+		
+	}
+	
+}
